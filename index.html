@@ -2,24 +2,11 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>Pixiv作品検索</title>
-    <script src="search.js" defer></script>
+    <title>Pixiv 作品一覧</title>
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <h1>Pixiv作品検索</h1>
-    
-    <label for="titleSearch">タイトル検索:</label>
-    <input type="text" id="titleSearch" placeholder="タイトルで検索">
-
-    <label for="keywordSearch">キーワード検索:</label>
-    <input type="text" id="keywordSearch" placeholder="キーワードで検索">
-
-    <h3>タグ検索:</h3>
-    <div id="tagContainer"></div>
-
-    <button onclick="search()">検索</button>
-    
-    <h2>検索結果</h2>
-    <div id="results"></div>
+    <h1>Pixiv 作品一覧</h1>
+    <ul id="fileList"></ul>
 </body>
 </html>
