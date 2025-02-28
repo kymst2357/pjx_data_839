@@ -8,8 +8,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+
+      - name: List repository contents (debug)
+        run: ls -R
+
       - name: Unzip file
-        run: unzip -o "*.zip" -d extracted_files
+        run: unzip -o $(find . -name "*.zip") -d extracted_files
+
       - name: Commit extracted files
         run: |
           git config --global user.name 'github-actions'
