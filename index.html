@@ -7,8 +7,19 @@
 </head>
 <body>
     <h1>Pixiv作品検索</h1>
-    <input type="text" id="searchInput" placeholder="作品名やタグで検索">
+    
+    <label for="titleSearch">タイトル検索:</label>
+    <input type="text" id="titleSearch" placeholder="タイトルで検索">
+
+    <label for="keywordSearch">キーワード検索:</label>
+    <input type="text" id="keywordSearch" placeholder="キーワードで検索">
+
+    <h3>タグ検索:</h3>
+    <div id="tagContainer"></div>
+
     <button onclick="search()">検索</button>
+    
+    <h2>検索結果</h2>
     <div id="results"></div>
 </body>
 </html>
