@@ -1,9 +1,8 @@
 async function search() {
     const query = document.getElementById('searchInput').value.toLowerCase();
-    const response = await fetch('extracted_files/pixiv/meta_date/all_data.json');
+    const response = await fetch('extracted_files/pixiv/all_date.json');
     const data = await response.json();
-    
-    // 検索条件に一致する作品をフィルタリング
+
     const results = data.filter(item => 
         item.title.toLowerCase().includes(query) || 
         item.tags.some(tag => tag.toLowerCase().includes(query))
@@ -15,7 +14,7 @@ async function search() {
 function displayResults(results) {
     const resultsDiv = document.getElementById('results');
     resultsDiv.innerHTML = '';
-    
+
     if (results.length === 0) {
         resultsDiv.innerHTML = '<p>該当する作品が見つかりませんでした。</p>';
         return;
